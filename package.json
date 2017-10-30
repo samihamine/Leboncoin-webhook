@@ -10,6 +10,9 @@
     "remove-accents": "^0.4.1",
     "request": "^2.81.0"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "\u0016https://github.com/SammyHam/Leboncoin-webhook"
