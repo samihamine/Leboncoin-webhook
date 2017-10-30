@@ -14,11 +14,12 @@ restService.use(bodyParser.json());
 restService.post('/webhook', function(req, res) {
     //var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Oups quleques problèmes de connexion, peux-tu répéter s'il te plaît ?"
     if( req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ){
-        leboncoin.search({ category:leboncoin.CATEGORIES.LOCATION }).then( result => {
+        var speech = "test ok ";
+        /*leboncoin.search({ category:leboncoin.CATEGORIES.LOCATION }).then( result => {
                 //console.log( result );
                 //var speech = result;
                 var speech = "test ok ";
-        })
+        })*/
     } else {
         var speech =  "Oups quleques problèmes de connexion, peux-tu répéter s'il te plaît ?";       
     }
