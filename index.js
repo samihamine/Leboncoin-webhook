@@ -16,7 +16,7 @@ restService.post('/webhook', function(req, res) {
         var leboncoin = require('./leboncoin');
         leboncoin.search({ category:leboncoin.CATEGORIES.LOCATION }).then( result => {
                 console.log( "resultats ok" );
-                var speech = result;
+                var speech = result[];
         });
     } else {
         var speech =  "Oups quleques problèmes de connexion, peux-tu répéter s'il te plaît ?";       
