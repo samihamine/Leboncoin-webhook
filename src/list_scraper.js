@@ -58,6 +58,10 @@ const extractPageData = html => {
     var $ = cheerio.load( html );
     var data = [];
     
+    /* SHE  */
+    var i = 1;
+    /* SHE */
+    
     $('.list_item').each( (i,e)=>{
 
         let datainfo = JSON.parse( $(e).attr( 'data-info' ) );
@@ -85,8 +89,12 @@ const extractPageData = html => {
             },
             images: image?[image]:[]
         });
+        console.log("################### Beak ####################### ");
+        if(++i > 1) {
+            return false;
+        }
     });
-
+    console.log("################### return data ####################### ");
     return data;
 }
 
